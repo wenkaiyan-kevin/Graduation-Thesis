@@ -27,7 +27,6 @@ scRNA <- FindClusters(scRNA, resolution = 0.2)
 scRNA <- RunUMAP(scRNA, dims = 1:5, min.dist = 0.1, n.neighbors = 120, n.epochs=1000)
 scRNA <- RunTSNE(scRNA, dims = 1:5)
 
-
 # 作图 ----------------------------------------------------------------------------
 cluster_cols <- c("#DC050C", "#FB8072", "#1965B0", "#7BAFDE", "#882E72",
                   "#B17BA6", "#FF7F00", "#FDB462", "#E7298A", "#E78AC3",
@@ -44,3 +43,30 @@ ggsave("scRNA-SAM-Clusters.pdf", plot = p, width = 12, height = 6)
 
 # 保存数据
 saveRDS(scRNA, file = "scRNA-SAM-Cluster.rds")
+
+
+## 细胞类群重新命名 ----------------------------------------------------------------------------
+library(Seurat)
+library(tidyverse)
+library(patchwork)
+library(dplyr)
+library(RColorBrewer)
+library(future)
+options(future.globals.maxSize = 50*1024^3)
+options(future.rng.onMisuse="ignore")
+plan("multicore", workers = 10)
+rm(list = ls())
+set.seed(1234)
+
+scRNA <- readRDS("../../../02-Clustering/02-Rice/03-SAM/02-Cluster/scRNA-SAM-Cluster.rds")
+DefaultAssay(scRNA) <- 'RNA'
+scRNA <- NormalizeData(scRNA, verbose = FALSE)
+
+new.cluster.ids <- c("mesophyll cell", "meristerm epidermis cell", "vascular cell", "shoot meristerm cell",
+                     "proliferating cell", "leaf epidermal cell", "undefined cell")
+names(new.cluster.ids) <- levels(scRNA)
+scRNA <- RenameIdents(scRNA, new.cluster.ids)
+scRNA$celltype <- Idents(scRNA)
+
+## save seurat object
+saveRDS(scRNA, "scRNA-SAM-annotation.rds")
