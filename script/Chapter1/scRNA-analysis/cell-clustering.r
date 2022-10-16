@@ -45,7 +45,7 @@ ggsave("scRNA-SAM-Clusters.pdf", plot = p, width = 12, height = 6)
 saveRDS(scRNA, file = "scRNA-SAM-Cluster.rds")
 
 
-## 细胞类群重新命名 ----------------------------------------------------------------------------
+#-------------------------------- 细胞类群重新命名 ----------------------------------------
 library(Seurat)
 library(tidyverse)
 library(patchwork)
@@ -70,3 +70,5 @@ scRNA$celltype <- Idents(scRNA)
 
 ## save seurat object
 saveRDS(scRNA, "scRNA-SAM-annotation.rds")
+
+
