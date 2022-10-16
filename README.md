@@ -39,8 +39,9 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
                  --force-cells=10000   
 ```
 **1.1.2 细胞的聚类与分群**  
-基于单细胞基因表达矩阵，我们将测序所得细胞进行过滤、分群与聚类，并对每个类群中的`marker基因`进行鉴定。  
- - [主要分析流程](docs/data_format.md)
+基于单细胞基因表达矩阵，我们将测序所得细胞进行过滤、分群与聚类，并对每个类群中的`marker`基因进行鉴定。  
+- [质控流程](script/Chapter1/scRNA-analysis/quality-control.r)
+- [聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)
 
 ### 1.2 单细胞染色质可及性分析结果
 
