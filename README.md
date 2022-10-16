@@ -46,13 +46,13 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 **1.1.3 marker基因鉴定**  
 - [差异基因分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)  
 
-**1.1.4 RNA速率**  
+**1.1.4 RNA速率分析**  
 - [loom文件的生成](script/Chapter1/scRNA-analysis/RNA-velocity-1.sh)
 - [转录剪切矩阵的生成](script/Chapter1/scRNA-analysis/RNA-velocity-2.r)
 - [RNA速率的计算](script/Chapter1/scRNA-analysis/RNA-velocity-3.py)  
 
-
-
+**1.1.5 茎端表皮细胞转录组分析**  
+- [分析内容](script/Chapter1/scRNA-analysis/epidermis-analysis.r)  
 
 
 ### 1.2 单细胞染色质可及性分析结果
