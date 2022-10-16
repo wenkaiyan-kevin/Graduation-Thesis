@@ -44,12 +44,14 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 - [聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)  
 
 **1.1.3 marker基因鉴定**  
-- [分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)  
+- [差异基因分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)  
 
 **1.1.4 RNA速率**  
 - [loom文件的生成](script/Chapter1/scRNA-analysis/RNA-velocity-1.sh)
-- [转录剪切矩阵的生成](script/Chapter1/scRNA-analysis/RNA-velocity-2.R)
+- [转录剪切矩阵的生成](script/Chapter1/scRNA-analysis/RNA-velocity-2.r)
 - [RNA速率的计算](script/Chapter1/scRNA-analysis/RNA-velocity-3.py)  
+
+
 
 
 
