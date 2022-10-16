@@ -41,13 +41,13 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 **1.1.2 细胞的聚类与分群**  
 基于单细胞基因表达矩阵，我们将测序所得细胞进行过滤、分群与聚类，并对每个类群中的`marker`基因进行鉴定。  
 - [质控流程](script/Chapter1/scRNA-analysis/quality-control.r)
-- [聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)
+- [聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)  
 **1.1.3 marker基因鉴定**  
-- [分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)
+- [分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)  
 **1.1.4 RNA速率**  
 - [loom文件的生成](script/Chapter1/scRNA-analysis/RNA-velocity-1.sh)
 - [转录剪切矩阵的生成](script/Chapter1/scRNA-analysis/RNA-velocity-2.R)
-- [RNA速率的计算](script/Chapter1/scRNA-analysis/RNA-velocity-3.py)
+- [RNA速率的计算](script/Chapter1/scRNA-analysis/RNA-velocity-3.py)  
 
 
 
