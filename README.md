@@ -54,6 +54,10 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 **1.1.5 茎端表皮细胞转录组分析**  
 - [分析内容](script/Chapter1/scRNA-analysis/epidermis-analysis.r)  
 
+**1.1.6 初始分生细胞转录组分析**  
+- [聚类分析](script/Chapter1/scRNA-analysis/meristem-analysis-1.r)
+- [拟时序分析](script/Chapter1/scRNA-analysis/meristem-analysis-2.r)
+- [调控网络分析](script/Chapter1/scRNA-analysis/meristem-GRN-analysis-2.r)
 
 ### 1.2 单细胞染色质可及性分析结果
 
