@@ -60,6 +60,22 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 - [调控网络分析](script/Chapter1/scRNA-analysis/meristem-GRN-analysis-2.r)
 
 ### 1.2 单细胞染色质可及性分析结果
+**1.2.1 数据预处理** 
+```
+cellranger-atac count --id SAM --reference /home/wkyan/ywk_lab/04-scATAC-analysis/00-seqlib/IRGSP \
+                      --fastqs /home/wkyan/ywk_lab/04-scATAC-analysis/01-raw-data/03-Shoot/data \
+                      --sample S_20201215NA --force-cells 8000
+```
+**1.2.2 细胞的聚类与分群** 
+基于单细胞染色质可及性矩阵，我们将测序所得细胞进行过滤、分群与聚类，并对每个类群中的`marker peak`进行鉴定。
+- [BSgenome的构建](script/Chapter1/scATAC-analysis/BSgenome-create.sh)
+- [基本信息统计](script/Chapter1/scATAC-analysis/data-info-analysis.sh)
+- [质控流程](script/Chapter1/scATAC-analysis/quality-control.r)
+- [聚类分群流程](script/Chapter1/scATAC-analysis/cell-clustering.r) 
+
+
+
+
 
 ## 二、水稻根端分生组织单细胞转录组与染色质可及性图谱绘制
 ### 2.1 单细胞转录组分析结果
