@@ -71,10 +71,13 @@ cellranger-atac count --id SAM --reference /home/wkyan/ywk_lab/04-scATAC-analysi
 - [BSgenome的构建](script/Chapter1/scATAC-analysis/BSgenome-create.sh)
 - [基本信息统计](script/Chapter1/scATAC-analysis/data-info-analysis.sh)
 - [质控流程](script/Chapter1/scATAC-analysis/quality-control.r)
-- [聚类分群流程](script/Chapter1/scATAC-analysis/cell-clustering.r) 
+- [聚类分群流程](script/Chapter1/scATAC-analysis/cell-clustering.r)
+- [染色质可及性与基因表达关系分析](script/Chapter1/scATAC-analysis/RNA-ATAC-relation-analysis.sh)
 
 
-
+**1.2.3 scRNA数据对scATAC细胞类群注释**  
+分析流程如下：  
+- [注释流程](script/Chapter1/scATAC-analysis/scRNA-scATAC-annotation.r)
 
 
 ## 二、水稻根端分生组织单细胞转录组与染色质可及性图谱绘制
