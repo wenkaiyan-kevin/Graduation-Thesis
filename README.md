@@ -3,18 +3,52 @@
 
 
 # 水稻顶端分生组织单细胞转录组与染色质可及性研究
-
+## 论文内容  
 本论文的主要研究内容为
 
+## 仓库信息 
+在该仓库中可以查询到论文中各个章节中所涉及的主要分析程序代码与分析结果
+
+## 分析环境的搭建  
+推荐使用conda搭建论文的生信分析环境，关于conda的安装与使用请[点击](https://docs.conda.io/en/latest/)。  
+**创建环境**
 ```
-Rscipt
+conda create -n sc-env
 ```
+
+**安装R分析环境所需软件**
+```
+conda install -c bioconda -c conda-forge -c bu_cnio -c bioturing r-seuratdata r-seuratwrappers \
+        bioconductor-cicero bioconductor-rsamtools bioconductor-motifmatchr bioconductor-jaspar2020 \
+        bioconductor-tfbstools bioconductor-monocle r-ggplot2 r-seurat r-seuratdisk  \
+        r-seuratObject r-velocyto.r r-signac r-monocle3 r-wgcna r-igraph r-devtools r-base r-cairo
+```
+**安装python分析环境所需软件**
+```
+conda install -c bioconda -c conda-forge python scanpy scvelo numpy pandas matplotlib loompy velocyto.py
+```
+
 
 ## 一、水稻茎端分生组织单细胞转录组与染色质可及性图谱绘制
+### 1.1 单细胞转录组分析结果
+**1.1.1 数据预处理**  
+本研究使用10x Genomics官方软件Cell Ranger（v.6.0.2）构建单细胞基因表达矩阵。
+```
+cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cellRanger_genome/rice/cellranger-RNA-IRGSP-genome/Oryza_sativa_IRGSP \
+                 --fastqs=/gss1/home/yanwk/ywk_Graduation_Project/00-SingleCell-data/02-Rice/02-Rice-Shoot/01-Mydata \
+                 --force-cells=10000   
+```
+**1.1.2 细胞的聚类与分群**  
+基于单细胞基因表达矩阵，我们将测序所得细胞进行过滤、分群与聚类，并对每个类群中的`marker基因`进行鉴定。  
+ - [主要分析流程](docs/data_format.md)
 
+### 1.2 单细胞染色质可及性分析结果
 
 ## 二、水稻根端分生组织单细胞转录组与染色质可及性图谱绘制
+### 2.1 单细胞转录组分析结果
 
+
+### 2.2 单细胞染色质可及性分析结果
 
 ## 三、单细胞精度下茎端与根端分生组织差异性研究
 
