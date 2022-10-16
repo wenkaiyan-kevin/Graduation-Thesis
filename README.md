@@ -66,7 +66,7 @@ cellranger-atac count --id SAM --reference /home/wkyan/ywk_lab/04-scATAC-analysi
                       --fastqs /home/wkyan/ywk_lab/04-scATAC-analysis/01-raw-data/03-Shoot/data \
                       --sample S_20201215NA --force-cells 8000
 ```
-**1.2.2 细胞的聚类与分群** 
+**1.2.2 细胞的聚类与分群**  
 基于单细胞染色质可及性矩阵，我们将测序所得细胞进行过滤、分群与聚类，并对每个类群中的`marker peak`进行鉴定。
 - [BSgenome的构建](script/Chapter1/scATAC-analysis/BSgenome-create.sh)
 - [基本信息统计](script/Chapter1/scATAC-analysis/data-info-analysis.sh)
