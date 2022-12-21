@@ -25,9 +25,8 @@ conda install -c bioconda -c conda-forge -c bu_cnio -c bioturing r-seuratdata r-
 conda install -c bioconda -c conda-forge python scanpy scvelo numpy pandas matplotlib loompy velocyto.py
 ```
 
-
 ## 一、水稻茎端分生组织单细胞转录组与染色质可及性图谱绘制
-
+### 本章节主要内容概览
 ```mermaid
         graph LR
                 A[scRNA-seq data] --> |cellRanger| C1(数据预处理)
@@ -51,7 +50,6 @@ conda install -c bioconda -c conda-forge python scanpy scvelo numpy pandas matpl
                 E2{细胞类型注释} --> H2(类群特异性表达基因的鉴定)
 ```
 
-
 ### 1.1 单细胞转录组分析结果
 **1.1.1 数据预处理**  
 本研究使用10x Genomics官方软件Cell Ranger（v.6.0.2）构建单细胞基因表达矩阵。
@@ -60,9 +58,10 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
                  --fastqs=/gss1/home/yanwk/ywk_Graduation_Project/00-SingleCell-data/02-Rice/02-Rice-Shoot/01-Mydata \
                  --force-cells=10000   
 ```
-**1.1.2 细胞的聚类与分群**  
-基于单细胞基因表达矩阵，我们将测序所得细胞进行过滤、分群与聚类，并对每个类群中的`marker`基因进行鉴定。  
-- [质控流程](script/Chapter1/scRNA-analysis/quality-control.r)
+**1.1.2 茎尖细胞异质性分析** 
+基于`cellranger`生成的单细胞基因表达矩阵，我们将对数据再次进行质控。随后，完成对细胞的聚类和分群。
+
+- [质控流程](script/Chapter1/scRNA-analysis/quality-control.r):图2-4
 - [聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)  
 
 **1.1.3 marker基因鉴定**  
