@@ -61,7 +61,7 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 #### 1.1.2 茎尖细胞异质性分析
 基于`cellranger`生成的单细胞基因表达矩阵，我们将对其再次进行质量控制与过滤。随后，完成对细胞的聚类和分群。
 
-- [质控流程](script/Chapter1/scRNA-analysis/quality-control.r)：图2-4
+- [质控流程](script/Chapter1/scRNA-analysis/quality-control.r)：图2-4不同质控条件下的数据分布
 - [聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)  
 
 **1.1.3 marker基因鉴定**  
