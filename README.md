@@ -28,14 +28,13 @@ conda install -c bioconda -c conda-forge python scanpy scvelo numpy pandas matpl
 
 ## 一、水稻茎端分生组织单细胞转录组与染色质可及性图谱绘制
 
-flow
-st=>start: Start
-op=>operation: Your Operation
-cond=>condition: Yes or No?
-e=>end
-st->op->cond
-cond(yes)->e
-cond(no)->op
+```mermaid
+  flowchart  TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
 
 
 ### 1.1 单细胞转录组分析结果
