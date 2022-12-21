@@ -51,17 +51,17 @@ conda install -c bioconda -c conda-forge python scanpy scvelo numpy pandas matpl
 ```
 
 ### 1.1 单细胞转录组分析结果
-**1.1.1 数据预处理**  
+#### 1.1.1 数据预处理
 本研究使用10x Genomics官方软件Cell Ranger（v.6.0.2）构建单细胞基因表达矩阵。
 ```
 cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cellRanger_genome/rice/cellranger-RNA-IRGSP-genome/Oryza_sativa_IRGSP \
                  --fastqs=/gss1/home/yanwk/ywk_Graduation_Project/00-SingleCell-data/02-Rice/02-Rice-Shoot/01-Mydata \
                  --force-cells=10000   
 ```
-**1.1.2 茎尖细胞异质性分析** 
-基于`cellranger`生成的单细胞基因表达矩阵，我们将对数据再次进行质控。随后，完成对细胞的聚类和分群。
+#### 1.1.2 茎尖细胞异质性分析
+基于`cellranger`生成的单细胞基因表达矩阵，我们将对其再次进行质量控制与过滤。随后，完成对细胞的聚类和分群。
 
-- [质控流程](script/Chapter1/scRNA-analysis/quality-control.r):图2-4
+- [质控流程](script/Chapter1/scRNA-analysis/quality-control.r)：图2-4
 - [聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)  
 
 **1.1.3 marker基因鉴定**  
