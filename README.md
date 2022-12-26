@@ -99,7 +99,7 @@ cellranger-atac count --id SAM --reference /home/wkyan/ywk_lab/04-scATAC-analysi
 #### 1.2.3 细胞类型的注释
 本节分析首先从染色质可及性与基因表达水平之间的相关性入手，通过整合RNA与ATAC两类单细胞数据对，细胞类型进行注释。  
 [染色质可及性与基因表达关系分析](script/Chapter1/scATAC-analysis/RNA-ATAC-relation-analysis.sh)：**图2-16A**(水稻茎尖单细胞染色质可及性图谱中细胞类型的注释)  
-[注释工作的分析流程]：(script/Chapter1/scATAC-analysis/scRNA-scATAC-annotation.r)**图2-16**(水稻茎尖单细胞染色质可及性图谱中细胞类型的注释)；**图2-17**(五个细胞类群在功能上的差异性)  
+[注释工作的分析流程](script/Chapter1/scATAC-analysis/scRNA-scATAC-annotation.r)：**图2-16**(水稻茎尖单细胞染色质可及性图谱中细胞类型的注释)；**图2-17**(五个细胞类群在功能上的差异性)  
 
 
 ## 二、水稻根端分生组织单细胞转录组与染色质可及性图谱绘制
