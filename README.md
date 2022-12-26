@@ -91,7 +91,7 @@ cellranger-atac count --id SAM --reference /home/wkyan/ywk_lab/04-scATAC-analysi
 ```
 #### 1.2.2 基于染色质可及性的水稻茎尖细胞异质性分析
 本论文中的单细胞染色质可及性数据主要使用Signac软件进行分析，由于该软件的分析流程中需要使用基因组信息，因此需先在R中构建水稻的`BSgenome`包，方便后续的加载与使用。
-- [BSgenome的构建](script/Chapter1/scATAC-analysis/BSgenome-create.sh)
+- [BSgenome的构建](script/Chapter1/scATAC-analysis/BSgenome-create.sh)  
 本节分析主要由以下三方面内容组成，详细分析流程如下所示：
 [数据信息统计](script/Chapter1/scATAC-analysis/data-info-analysis.sh)：**图2-13**(水稻茎尖单细胞染色质可及性数据质量)
 [数据质控流程](script/Chapter1/scATAC-analysis/quality-control.r)：**图2-14**(不同质控条件下的数据分布)
