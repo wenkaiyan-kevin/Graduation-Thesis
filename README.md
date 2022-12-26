@@ -171,15 +171,15 @@ ___
 
 ### 3.2 水稻与拟南芥根尖单细胞比较转录组分析
 分析结果如**图4-2**(单细胞精度下水稻与拟南芥根尖比较分析)所示。  
-[根尖单细胞比较转录组分析流程](script/Chapter3/root-analysis.r)
+[物种间根尖单细胞比较转录组分析流程](script/Chapter3/root-analysis.r)
 
 ### 3.3 水稻与拟南芥茎尖单细胞比较转录组分析
 分析结果如**图4-3**(单细胞精度下水稻与拟南芥茎尖比较分析)所示。  
-[根尖单细胞比较转录组分析流程](script/Chapter3/shoot-analysis.r)
+[物种间茎尖单细胞比较转录组分析流程](script/Chapter3/shoot-analysis.r)
 
 ### 3.4 水稻茎尖与根尖单细胞比较转录组分析
 分析结果如**图4-4**(单细胞精度下水稻根尖与茎尖比较分析)所示。  
-[根尖单细胞比较转录组分析流程](script/Chapter3/rice-root-shoot-analysis.r)
+[物种内根尖与茎尖单细胞比较转录组分析流程](script/Chapter3/rice-root-shoot-analysis.r)
 
 ## 四、基于深度学习的植物转录因子结合位点预测
 模型详细代码信息请访问：https://github.com/wenkaiyan-kevin/PlantBind
