@@ -140,6 +140,17 @@ ___
 
 ### 2.2 单细胞染色质可及性分析结果
 
+#### 2.2.1 单细胞多组学数据整合方法间的比较
+本节内容主要是使用`Seurat`、`liger`、`scglue`三种方法完成对scRNA-seq与scATAC-seq数据的整合。三种方法的分析流程如下所示：  
+- [Seurat分析流程](script/Chapter2/scATAC-analysis/Seurat-analysis.r)：**图3-8**(不同数据整合方法下水稻根尖scRNA与scATAC数据的联合分析)
+- [liger分析流程](script/Chapter2/scATAC-analysis/liger-analysis.r)：**图3-8**(不同数据整合方法下水稻根尖scRNA与scATAC数据的联合分析)
+- [scglue分析流程](script/Chapter2/scATAC-analysis/glue-analysis.py)：**图3-8**(不同数据整合方法下水稻根尖scRNA与scATAC数据的联合分析)
+
+#### 2.2.2 细胞类型的注释
+依据liger的分析结果进一步对细胞的类型进行注释，详细的分析流程请点击：[细胞注释流程](script/Chapter2/scATAC-analysis/cell-annotation.r)。分析结果如**图3-9**(单细胞转录组与单细胞染色质可及性数据联合分析以鉴定细胞类型)。
+
+#### 2.2.3 细胞类型中特异性染色质开放区间的分析
+本节通过提取每个细胞簇特异性peak区间，然后对其结合的转录因子进行富集分析，部分分析流程请点击：[转录因子富集分析流程](script/Chapter2/scATAC-analysis/TF-analysis.r)。分析结果如**图3-10**(细胞类型特异性Peaks区间内转录因子结合motifs的富集分析)。
 
 ## 三、单细胞精度下茎端与根端分生组织差异性研究
 
