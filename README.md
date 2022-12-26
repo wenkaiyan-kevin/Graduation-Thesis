@@ -61,16 +61,14 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 #### 1.1.2 茎尖细胞异质性分析
 基于`cellranger`生成的单细胞基因表达矩阵，我们将对其再次进行质量控制与过滤。随后，完成对细胞的聚类和分群。
 
-- [质控流程](script/Chapter1/scRNA-analysis/quality-control.r)：图2-4(不同质控条件下的数据分布)
-- [聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)  
+- [数据质控流程](script/Chapter1/scRNA-analysis/quality-control.r)：图2-4(不同质控条件下的数据分布)
+- [聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)：图2-5(水稻茎尖单细胞转录组图谱的构建)
 
-**1.1.3 marker基因鉴定**  
-- [差异基因分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)  
+#### 1.1.3 类群标记基因的鉴定
+- [细胞簇标记基因分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)：图2-5(水稻茎尖单细胞转录组图谱的构建)；图2-6(水稻茎尖单细胞图谱中不同细胞类群在其功能上的差异性)
 
-**1.1.4 RNA速率分析**  
-- [loom文件的生成](script/Chapter1/scRNA-analysis/RNA-velocity-1.sh)
-- [转录剪切矩阵的生成](script/Chapter1/scRNA-analysis/RNA-velocity-2.r)
-- [RNA速率的计算](script/Chapter1/scRNA-analysis/RNA-velocity-3.py)  
+#### 1.1.4 细胞簇分化轨迹分析
+本小节分析流程主要由三个步骤组成，分别是：(1)[loom文件的生成](script/Chapter1/scRNA-analysis/RNA-velocity-1.sh);(2)[转录剪切矩阵的生成](script/Chapter1/scRNA-analysis/RNA-velocity-2.r);(3)[RNA速率的计算](script/Chapter1/scRNA-analysis/RNA-velocity-3.py)。主要分析结果参见图2-7(水稻茎端细胞动态发育轨迹的构建)
 
 **1.1.5 茎端表皮细胞转录组分析**  
 - [分析内容](script/Chapter1/scRNA-analysis/epidermis-analysis.r)  
