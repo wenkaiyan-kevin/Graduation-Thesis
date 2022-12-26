@@ -75,13 +75,15 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 [主要分析流程](script/Chapter1/scRNA-analysis/epidermis-analysis.r)：**图2-9**(表皮细胞亚群间的差异表达分析)
 
 #### 1.1.6 水稻茎尖干细胞亚群异质性分析
-本小节分析主要涉及单细胞亚群的提取、再次聚类分群、基因集富集表达分析。主要分析结果参见**图2-10**(分生细胞类群的异质性)。
-[干胞亚群聚类分群流程](script/Chapter1/scRNA-analysis/meristem-analysis-1.r)
+本小节分析主要涉及单细胞亚群的提取、再次聚类分群、基因集富集表达分析。  
+主要分析流程请点击：[干胞亚群聚类分群流程](script/Chapter1/scRNA-analysis/meristem-analysis-1.r)。  
+主要分析结果参见**图2-10**(分生细胞类群的异质性)。
+
 
 #### 1.1.7 水稻茎尖干细胞亚群发育轨迹和基因调控网络的构建
-[水稻茎尖干细胞亚群发育轨迹分析](script/Chapter1/scRNA-analysis/meristem-analysis-2.py)  
-[水稻茎尖干细胞亚群发育轨迹调控网络分析](script/Chapter1/scRNA-analysis/meristem-GRN-analysis-2.r)  
-
+**Palantir**的使用、调控网路的构建请点击[水稻茎尖干细胞亚群发育轨迹分析](script/Chapter1/scRNA-analysis/meristem-analysis-2.py)和[水稻茎尖干细胞亚群发育轨迹调控网络分析](script/Chapter1/scRNA-analysis/meristem-GRN-analysis-2.r)。  
+主要分析结果参见**图2-11**(茎尖分生细胞分化轨迹)和**图2-12**(茎尖分生细胞分化过程中转录调控网络的构建)。
+___
 ### 1.2 单细胞染色质可及性分析结果
 **1.2.1 数据预处理** 
 ```
