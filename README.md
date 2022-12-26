@@ -122,19 +122,19 @@ ___
 
 ### 2.1 单细胞转录组分析结果
 #### 2.1.1 水稻根尖细胞异质性研究
-[两组水稻根尖单细胞转录组数据的整合流程](script/Chapter2/scRNA-analysis/scRNA-integrated.r)  
-[细胞类群的注释流程](script/Chapter2/scRNA-analysis/scRNA-integrated.r)
+通过整合已发表的水稻根尖单细胞转录组数据，构建出更为详细的的根尖单细胞图谱。主要分析内容和流程如下所示：
+[两组水稻根尖单细胞转录组数据的整合流程](script/Chapter2/scRNA-analysis/scRNA-integrated.r)：**图3-1**(水稻根尖单细胞图谱的构建)  
+[细胞类群的注释流程](script/Chapter2/scRNA-analysis/scRNA-integrated.r)：**图3-1**(水稻根尖单细胞图谱的构建)
 
 #### 2.1.2 水稻根尖细胞发育图谱的构建
-
-[根尖细胞发育图谱的构建流程](script/Chapter2/scRNA-analysis/scRNA-Development-analysis.r)
+通过使用Monocle3软件构建出表皮，外皮层，皮层，内皮层以及维管细胞的分化发育图谱。详细的分析流程请点击：[根尖细胞发育图谱的构建流程](script/Chapter2/scRNA-analysis/scRNA-Development-analysis.r)。详细分析结果如**图3-2**(水稻根尖细胞的动态分化过程)所示。
 
 #### 2.1.3 根尖表皮细胞发育轨迹
-
+提取表皮细胞亚群，刻画出根毛和非根毛细胞的分化路径。详细分析流程如下所示：  
 [根尖表皮细胞发育轨迹分析流程](script/Chapter2/scRNA-analysis/scRNA-epidermal-analysis.r)
 
 #### 2.1.4 植物激素合成及响应基因在根尖细胞中的表达与分布
-
+本节主要是观察生长素、细胞分裂素等植物激素合成和响应基因的表达模式。详细分析流程如下所示：  
 [植物激素合成及响应基因分析流程](script/Chapter2/scRNA-analysis/scRNA-Phytohormones-analysis.r)
 
 ## 三、单细胞精度下茎端与根端分生组织差异性研究
