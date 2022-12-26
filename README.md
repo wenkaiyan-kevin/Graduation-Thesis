@@ -65,7 +65,7 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 [聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)：**图2-5**(水稻茎尖单细胞转录组图谱的构建)  
 
 #### 1.1.3 类群标记基因的鉴定
-[细胞簇标记基因分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)：**图2-5**(水稻茎尖单细胞转录组图谱的构建)；图2-6(水稻茎尖单细胞图谱中不同细胞类群在其功能上的差异性)
+[细胞簇标记基因分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)：**图2-5**(水稻茎尖单细胞转录组图谱的构建)；**图2-6**(水稻茎尖单细胞图谱中不同细胞类群在其功能上的差异性)
 
 #### 1.1.4 细胞簇分化轨迹分析
 本小节分析流程主要由三个步骤组成，分别是：（1）[loom文件的生成](script/Chapter1/scRNA-analysis/RNA-velocity-1.sh)；（2）[转录剪切矩阵的生成](script/Chapter1/scRNA-analysis/RNA-velocity-2.r)；（3）[RNA速率的计算](script/Chapter1/scRNA-analysis/RNA-velocity-3.py)。主要分析结果参见**图2-7**(水稻茎端细胞动态发育轨迹的构建)
@@ -79,30 +79,28 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 主要分析流程请点击：[干胞亚群聚类分群流程](script/Chapter1/scRNA-analysis/meristem-analysis-1.r)。  
 主要分析结果参见**图2-10**(分生细胞类群的异质性)。
 
-
 #### 1.1.7 水稻茎尖干细胞亚群发育轨迹和基因调控网络的构建
-**Palantir**的使用、调控网路的构建请点击[水稻茎尖干细胞亚群发育轨迹分析](script/Chapter1/scRNA-analysis/meristem-analysis-2.py)和[水稻茎尖干细胞亚群发育轨迹调控网络分析](script/Chapter1/scRNA-analysis/meristem-GRN-analysis-2.r)。  
-主要分析结果参见**图2-11**(茎尖分生细胞分化轨迹)和**图2-12**(茎尖分生细胞分化过程中转录调控网络的构建)。
+**Palantir**的使用、调控网路的构建请点击[水稻茎尖干细胞亚群发育轨迹分析](script/Chapter1/scRNA-analysis/meristem-analysis-2.py)和[水稻茎尖干细胞亚群发育轨迹调控网络分析](script/Chapter1/scRNA-analysis/meristem-GRN-analysis-2.r)。主要分析结果参见**图2-11**(茎尖分生细胞分化轨迹)和**图2-12**(茎尖分生细胞分化过程中转录调控网络的构建)。
 ___
 ### 1.2 单细胞染色质可及性分析结果
-**1.2.1 数据预处理** 
+#### 1.2.1 测序数据预处理
 ```
 cellranger-atac count --id SAM --reference /home/wkyan/ywk_lab/04-scATAC-analysis/00-seqlib/IRGSP \
                       --fastqs /home/wkyan/ywk_lab/04-scATAC-analysis/01-raw-data/03-Shoot/data \
                       --sample S_20201215NA --force-cells 8000
 ```
-**1.2.2 细胞的聚类与分群**  
-基于单细胞染色质可及性矩阵，我们将测序所得细胞进行过滤、分群与聚类，并对每个类群中的`marker peak`进行鉴定。
+#### 1.2.2 基于染色质可及性的水稻茎尖细胞异质性分析
+本论文中的单细胞染色质可及性数据主要使用Signac软件进行分析，由于该软件的分析流程中需要使用基因组信息，因此需先在R中构建水稻的`BSgenome`包，方便后续的加载与使用。
 - [BSgenome的构建](script/Chapter1/scATAC-analysis/BSgenome-create.sh)
-- [基本信息统计](script/Chapter1/scATAC-analysis/data-info-analysis.sh)
-- [质控流程](script/Chapter1/scATAC-analysis/quality-control.r)
-- [聚类分群流程](script/Chapter1/scATAC-analysis/cell-clustering.r)
-- [染色质可及性与基因表达关系分析](script/Chapter1/scATAC-analysis/RNA-ATAC-relation-analysis.sh)
+本节分析主要由以下三方面内容组成，详细分析流程如下所示：
+[数据信息统计](script/Chapter1/scATAC-analysis/data-info-analysis.sh)：**图2-13**(水稻茎尖单细胞染色质可及性数据质量)
+[数据质控流程](script/Chapter1/scATAC-analysis/quality-control.r)：**图2-14**(不同质控条件下的数据分布)
+[聚类分群流程](script/Chapter1/scATAC-analysis/cell-clustering.r)：**图2-15**(水稻茎尖单细胞染色质可及性图谱的构建)
 
-
-**1.2.3 scRNA数据对scATAC细胞类群注释**  
-分析流程如下：  
-- [注释流程](script/Chapter1/scATAC-analysis/scRNA-scATAC-annotation.r)
+#### 1.2.3 细胞类型的注释
+本节分析首先从染色质可及性与基因表达水平之间的相关性入手，通过整合RNA与ATAC两类单细胞数据对，细胞类型进行注释。  
+[染色质可及性与基因表达关系分析](script/Chapter1/scATAC-analysis/RNA-ATAC-relation-analysis.sh)：**图2-16A**(水稻茎尖单细胞染色质可及性图谱中细胞类型的注释)  
+[注释工作的分析流程](script/Chapter1/scATAC-analysis/scRNA-scATAC-annotation.r)**图2-16**(水稻茎尖单细胞染色质可及性图谱中细胞类型的注释)；**图2-17**(五个细胞类群在功能上的差异性)  
 
 
 ## 二、水稻根端分生组织单细胞转录组与染色质可及性图谱绘制
