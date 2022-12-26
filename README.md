@@ -61,23 +61,26 @@ cellranger count --id=scRNA_Rice_SAM --transcriptome=/gss1/home/yanwk/seqlib/cel
 #### 1.1.2 茎尖细胞异质性分析
 基于`cellranger`生成的单细胞基因表达矩阵，我们将对其再次进行质量控制与过滤。随后，完成对细胞的聚类和分群。  
 
-[数据质控流程](script/Chapter1/scRNA-analysis/quality-control.r)：图2-4(不同质控条件下的数据分布)  
-[聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)：图2-5(水稻茎尖单细胞转录组图谱的构建)  
+[数据质控流程](script/Chapter1/scRNA-analysis/quality-control.r)：**图2-4**(不同质控条件下的数据分布)  
+[聚类分群流程](script/Chapter1/scRNA-analysis/cell-clustering.r)：**图2-5**(水稻茎尖单细胞转录组图谱的构建)  
 
 #### 1.1.3 类群标记基因的鉴定
-[细胞簇标记基因分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)：图2-5(水稻茎尖单细胞转录组图谱的构建)；图2-6(水稻茎尖单细胞图谱中不同细胞类群在其功能上的差异性)
+[细胞簇标记基因分析流程](script/Chapter1/scRNA-analysis/DEGs-analysis.r)：**图2-5**(水稻茎尖单细胞转录组图谱的构建)；图2-6(水稻茎尖单细胞图谱中不同细胞类群在其功能上的差异性)
 
 #### 1.1.4 细胞簇分化轨迹分析
-本小节分析流程主要由三个步骤组成，分别是：（1）[loom文件的生成](script/Chapter1/scRNA-analysis/RNA-velocity-1.sh)；（2）[转录剪切矩阵的生成](script/Chapter1/scRNA-analysis/RNA-velocity-2.r)；（3）[RNA速率的计算](script/Chapter1/scRNA-analysis/RNA-velocity-3.py)。主要分析结果参见图2-7(水稻茎端细胞动态发育轨迹的构建)
+本小节分析流程主要由三个步骤组成，分别是：（1）[loom文件的生成](script/Chapter1/scRNA-analysis/RNA-velocity-1.sh)；（2）[转录剪切矩阵的生成](script/Chapter1/scRNA-analysis/RNA-velocity-2.r)；（3）[RNA速率的计算](script/Chapter1/scRNA-analysis/RNA-velocity-3.py)。主要分析结果参见**图2-7**(水稻茎端细胞动态发育轨迹的构建)
 
 #### 1.1.5 水稻茎尖表皮细胞亚群转录组分析
 本小节的分析流程中包括单细胞亚群的提取、差异表达基因分析、火山图、柱状图的绘制。  
-[主要分析流程](script/Chapter1/scRNA-analysis/epidermis-analysis.r)：图2-9(表皮细胞亚群间的差异表达分析)
+[主要分析流程](script/Chapter1/scRNA-analysis/epidermis-analysis.r)：**图2-9**(表皮细胞亚群间的差异表达分析)
 
-**1.1.6 初始分生细胞转录组分析**  
-[聚类分析](script/Chapter1/scRNA-analysis/meristem-analysis-1.r)  
-[拟时序分析](script/Chapter1/scRNA-analysis/meristem-analysis-2.py)  
-[调控网络分析](script/Chapter1/scRNA-analysis/meristem-GRN-analysis-2.r)  
+#### 1.1.6 水稻茎尖干细胞亚群异质性分析
+本小节分析主要涉及单细胞亚群的提取、再次聚类分群、基因集富集表达分析。主要分析结果参见**图2-10**(分生细胞类群的异质性)。
+[干胞亚群聚类分群流程](script/Chapter1/scRNA-analysis/meristem-analysis-1.r)
+
+#### 1.1.7 水稻茎尖干细胞亚群发育轨迹和基因调控网络的构建
+[水稻茎尖干细胞亚群发育轨迹分析](script/Chapter1/scRNA-analysis/meristem-analysis-2.py)  
+[水稻茎尖干细胞亚群发育轨迹调控网络分析](script/Chapter1/scRNA-analysis/meristem-GRN-analysis-2.r)  
 
 ### 1.2 单细胞染色质可及性分析结果
 **1.2.1 数据预处理** 
