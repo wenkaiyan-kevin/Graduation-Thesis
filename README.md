@@ -91,15 +91,15 @@ cellranger-atac count --id SAM --reference /home/wkyan/ywk_lab/04-scATAC-analysi
 ```
 #### 1.2.2 基于染色质可及性的水稻茎尖细胞异质性分析
 本论文中的单细胞染色质可及性数据主要使用Signac软件进行分析，由于该软件的分析流程中需要使用基因组信息，因此需先在R中构建水稻的`BSgenome`包，方便后续的加载与使用。构建流程请点击：[BSgenome的构建](script/Chapter1/scATAC-analysis/BSgenome-create.sh)  
-本节分析主要由以下三方面内容组成，详细分析流程如下所示：
-[数据信息统计](script/Chapter1/scATAC-analysis/data-info-analysis.sh)：**图2-13**(水稻茎尖单细胞染色质可及性数据质量)
-[数据质控流程](script/Chapter1/scATAC-analysis/quality-control.r)：**图2-14**(不同质控条件下的数据分布)
-[聚类分群流程](script/Chapter1/scATAC-analysis/cell-clustering.r)：**图2-15**(水稻茎尖单细胞染色质可及性图谱的构建)
+本节分析主要由以下三方面内容组成，详细分析流程如下所示：  
+[数据信息统计](script/Chapter1/scATAC-analysis/data-info-analysis.sh)：**图2-13**(水稻茎尖单细胞染色质可及性数据质量)  
+[数据质控流程](script/Chapter1/scATAC-analysis/quality-control.r)：**图2-14**(不同质控条件下的数据分布)  
+[聚类分群流程](script/Chapter1/scATAC-analysis/cell-clustering.r)：**图2-15**(水稻茎尖单细胞染色质可及性图谱的构建)  
 
 #### 1.2.3 细胞类型的注释
 本节分析首先从染色质可及性与基因表达水平之间的相关性入手，通过整合RNA与ATAC两类单细胞数据对，细胞类型进行注释。  
 [染色质可及性与基因表达关系分析](script/Chapter1/scATAC-analysis/RNA-ATAC-relation-analysis.sh)：**图2-16A**(水稻茎尖单细胞染色质可及性图谱中细胞类型的注释)  
-[注释工作的分析流程](script/Chapter1/scATAC-analysis/scRNA-scATAC-annotation.r)**图2-16**(水稻茎尖单细胞染色质可及性图谱中细胞类型的注释)；**图2-17**(五个细胞类群在功能上的差异性)  
+[注释工作的分析流程]：(script/Chapter1/scATAC-analysis/scRNA-scATAC-annotation.r)**图2-16**(水稻茎尖单细胞染色质可及性图谱中细胞类型的注释)；**图2-17**(五个细胞类群在功能上的差异性)  
 
 
 ## 二、水稻根端分生组织单细胞转录组与染色质可及性图谱绘制
