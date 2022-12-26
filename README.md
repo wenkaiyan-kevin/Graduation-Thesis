@@ -106,7 +106,7 @@ cellranger-atac count --id SAM --reference /home/wkyan/ywk_lab/04-scATAC-analysi
 ### 本章节主要内容概览
 ```mermaid
         graph LR
-                A[五个scRNA-seq数据集] --> |Seurat| C1(数据整合)
+                A[两组scRNA-seq数据集] --> |Seurat| C1(数据整合)
                 B[scATAC-seq data] --> |cellRanger ATAC| C2(数据预处理)
                 C1(数据整合) --> |去除批次效应| D1(水稻根尖细胞异质性研究)
                 D1(水稻根尖细胞异质性研究) --> E1(水稻根尖细胞发育图谱的构建)
@@ -122,16 +122,20 @@ ___
 
 ### 2.1 单细胞转录组分析结果
 #### 2.1.1 水稻根尖细胞异质性研究
-
+[两组水稻根尖单细胞转录组数据的整合流程](script/Chapter2/scRNA-analysis/scRNA-integrated.r)  
+[细胞类群的注释流程](script/Chapter2/scRNA-analysis/scRNA-integrated.r)
 
 #### 2.1.2 水稻根尖细胞发育图谱的构建
 
+[根尖细胞发育图谱的构建流程](script/Chapter2/scRNA-analysis/scRNA-Development-analysis.r)
 
 #### 2.1.3 根尖表皮细胞发育轨迹
 
+[根尖表皮细胞发育轨迹分析流程](script/Chapter2/scRNA-analysis/scRNA-epidermal-analysis.r)
 
 #### 2.1.4 植物激素合成及响应基因在根尖细胞中的表达与分布
 
+[植物激素合成及响应基因分析流程](script/Chapter2/scRNA-analysis/scRNA-Phytohormones-analysis.r)
 
 ## 三、单细胞精度下茎端与根端分生组织差异性研究
 
