@@ -131,11 +131,11 @@ ___
 
 #### 2.1.3 根尖表皮细胞发育轨迹
 提取表皮细胞亚群，刻画出根毛和非根毛细胞的分化路径。详细分析流程如下所示：  
-[根尖表皮细胞发育轨迹分析流程](script/Chapter2/scRNA-analysis/scRNA-epidermal-analysis.r)
+[根尖表皮细胞发育轨迹分析流程](script/Chapter2/scRNA-analysis/scRNA-epidermal-analysis.r)：**图3-3**(水稻根尖表皮细胞分化轨迹分析)
 
 #### 2.1.4 植物激素合成及响应基因在根尖细胞中的表达与分布
 本节主要是观察生长素、细胞分裂素等植物激素合成和响应基因的表达模式。详细分析流程如下所示：  
-[植物激素合成及响应基因分析流程](script/Chapter2/scRNA-analysis/scRNA-Phytohormones-analysis.r)
+[植物激素合成及响应基因分析流程](script/Chapter2/scRNA-analysis/scRNA-Phytohormones-analysis.r)：**图3-4**(植物激素合成及响应基因表达模式的UMAP可视化)
 
 ## 三、单细胞精度下茎端与根端分生组织差异性研究
 
